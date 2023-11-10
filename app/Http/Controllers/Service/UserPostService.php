@@ -20,10 +20,10 @@ class UserPostService
     }
     public static function updatePost(Request $request){
         $tmp = userpost::find($request->id);
-        $tmp->user_id = $request->uid;
-        $tmp->cell_name = $request->cell;
-        $tmp->case_name = $request->case;
-        $tmp->case_description = $request->desc;
+        $tmp->user_id = $request->input('user_id');
+        $tmp->cell_name = $request->input('cell_name');
+        $tmp->case_name = $request->input('case_name');
+        $tmp->case_description = $request->input('case_descriptions');
         $tmp->save();
         return userpost::all();
     }

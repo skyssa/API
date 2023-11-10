@@ -36,12 +36,12 @@ use App\Http\Controllers\Service\MainService;
 Route::get("/getallitem",[MainService::class,"getAllUserItem"]);
 Route::post("/additem",[MainService::class,"addUserItem"]);
 Route::post("/updateitem/{id}",[MainService::class,"updateUserItem"]);
-Route::post("/deleteitem",[MainService::class,"deleteUserItem"]);
+Route::post("/deleteitem/{id}",[MainService::class,"deleteUserItem"]);
 // User Post
 Route::get("/getallpost",[MainService::class,"getAllPost"]);
 Route::post("/addpostdata",[MainService::class,"addPost"]);
-Route::post("/updatepostdata",[MainService::class,"updatePost"]);
-Route::post("/deletepostdata",[MainService::class,"deletePost"]);
+Route::post("/updatepostdata/{id}",[MainService::class,"updatePost"]);
+Route::post("/deletepostdata/{id}",[MainService::class,"deletePost"]);
 
 
 

@@ -34,11 +34,7 @@ class UserItemService
     {
         $tmp = useritem::find($request->id);
 
-        // $tmp->product_name = $request->pname;
-        // $tmp->product_description = $request->pdesc;
-        // $tmp->product_price = $request->pprice;
-        // $tmp->product_quantity = $request->pquan;
-        // $tmp->product_status = $request->pstatus;
+
         $tmp->product_name = $request->input('product_name');
         $tmp->product_description = $request->input('product_description');
         $tmp->product_price = $request->input('product_price');

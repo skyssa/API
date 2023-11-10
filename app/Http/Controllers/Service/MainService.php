@@ -36,11 +36,7 @@ class MainService
     {
         $tmp = useritem::find($request->id);
 
-        // $tmp->product_name = $request->pname;
-        // $tmp->product_description = $request->pdesc;
-        // $tmp->product_price = $request->pprice;
-        // $tmp->product_quantity = $request->pquan;
-        // $tmp->product_status = $request->pstatus;
+
         $tmp->product_name = $request->input('product_name');
         $tmp->product_description = $request->input('product_description');
         $tmp->product_price = $request->input('product_price');
@@ -73,10 +69,10 @@ class MainService
     }
     public static function updatePost(Request $request){
         $tmp = userpost::find($request->id);
-        $tmp->user_id = $request->uid;
-        $tmp->cell_name = $request->cell;
-        $tmp->case_name = $request->case;
-        $tmp->case_description = $request->desc;
+        $tmp->user_id = $request->input('user_id');
+        $tmp->cell_name = $request->input('cell_name');
+        $tmp->case_name = $request->input('case_name');
+        $tmp->case_description = $request->input('case_descriptions');
         $tmp->save();
         return userpost::all();
     }
