@@ -1,0 +1,3 @@
+after download 
+type php artisan migrate in vscode terminal for connecting to database make sure the xampp is online
+then type php artisan serve to make the code Run and use POSTMAN for input and output of the code
